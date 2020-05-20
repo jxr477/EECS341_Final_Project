@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Esports Database</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{url_for('static', filename= 'bootstrap.min.css')}}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for ('static', filename= 'theme.css')}}" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Esports Database</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="/">Home</a></li>
+            <li class="active"><a href="#">Search For Player</a></li>
+            <li><a href="/club">Search For Club</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container theme-showcase col-sm-6 col-sm-offset-3" role="main">
+
+      <div class="row">
+        <div>
+
+          <div class="panel panel-primary">
+
+            <div class="panel-heading">
+              <h3 class="panel-title">Player</h3>
+            </div>
+
+            <div class="panel-body">
+
+              <form method="POST" action="{{ url_for('player')}}">
+<!--                 <div class="form-group">
+                  <label for="carbohydrates">Game</label>
+                  <select class="form-control" name = "gameID">
+                   <option value="" selected disabled hidden>Select a Game</option>
+                   <option value=000001 >LOL</option>
+                   <option value=000002 >DOTA</option>
+                   <option value=000003 >CSGO</option>
+                   </select>
+                </div>   -->   
+                <div class="form-group">
+                  <label for="carbohydrates">Team</label>
+                  <select class="form-control" name = "team">
+                   <option value=''>All Clubs</option>
+                   <option value="Team Liquid" >Team Liquid</option>
+                   <option value="LGD" >LGD</option>
+                   <option value="Natus Vincere" >Natus Vincere</option>
+                   <option value="Team SoloMid" >Team SoloMid</option>
+                   <option value="Evil Geniuses" >Evil Geniuses</option>
+                   <option value="RRQ.Trust" >RRQ.Trust</option>                   
+                   </select>
+                </div>                            
+                <div class="form-group">
+                  <label for="country">Nationality</label>
+                  <select class="form-control" name = "country">
+                   <option value='all' >All Countries</option>
+                   <option value="Ukraine" >"Ukraine"</option>
+                   <option value="Bulgaria" >"Bulgaria"</option>
+                   <option value="China" >"China"</option>
+                   <option value="Russia" >"Russia"</option>
+                   <option value="Kyrgyzstan">"Kyrgyzstan"</option>
+                   <option value="Belgium" >"Belgium"</option>
+                   <option value="Sweden" >"Sweden"</option>
+                   <option value="France" >"France"</option>
+                   <option value="Slovakia" >"Slovakia"</option>
+                   <option value="Pakistan" >""Pakistan"</option>
+                   <option value="Israel" >"Israel"</option>
+                   <option value="Romania" >"Romania"</option>                  
+                   <option value="Jordan" >"Jordan"</option>
+                   <option value="Lebanon">"Lebanon"</option>                   
+                   <option value="Denmark">Denmark"</option>
+                   <option value="Canada" >"Canada"</option>
+                   <option value="South Korea" >"South Korea"</option>
+                   <option value="Thailand" >"Thailand"</option>
+                   <option value="United States" >"United States"</option>
+                   </select>
+                </div>  
+                <div class="form-group">
+                  <label for="rank">Age</label>
+                    <div>
+                      <input type="checkbox" id="age" name="age">
+                      <label for="age">Show Player Age</label>
+                    </div>
+                </div> 
+                <button type="submit" class="btn btn-primary">Search</button>
+              </form>
+              </div>
+
+           <div class="panel-heading">
+              <h3 class="panel-title">Result</h3>
+            </div> 
+            <table align="right">
+            <p>{{ output | safe }}</p>
+          </table>
+<!--               {% for item in output %}
+                <tr>
+                    <td>{{item[0]}}</td>
+                    <td>{{item[1]}}</td>
+                    <td>{{item[2]}}</td>
+                </tr>
+                {% endfor %} -->
+               {% for item in output2 %}
+                    <h3>No Such a Player</h3>
+                {% endfor %}
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+
+</html>

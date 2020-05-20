@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Esports Database</title>
+
+    <link href="{{url_for('static', filename= 'bootstrap.min.css')}}" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for ('static', filename= 'theme.css')}}" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Esports Database</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home</a></li>
+            <li><a href="player">Search For Player</a></li>
+            <li><a href="/club">Search For Club</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container theme-showcase col-sm-6 col-sm-offset-3" role="main">
+
+          </form>
+
+          <div class="page-header"></div>
+
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">EECS341 Fall 2019 Group 9 </h3>
+            </div>
+            <div class="panel-body">
+              <body text="green">
+                <h1>Application Background </h1>
+                <p>There are many video games played competitively at the international level. Teams trade players and interact with other teams in tournaments and majors. Some players switch games. Teams have statistics such as the number of major wins, and players have statistics such as points per game. Our database will track and make simple tracking this complex scene for the user. </p>
+                </body>
+                <body text="green">
+                <h1>Data description</h1>
+                            <p>In this database, we’ll be tracking the following entities: player, club, tournament, arena, reward, status, and coach.
+            The players will be signed onto a team and will have a status for overall statistics.  Each player has basic attributes like name, age, nationality.  Clubs will play certain games and hire coaches.  Coach has similar attributes to player, and clubs have a formation date, whether they are active, nationality, and ranking.
+            Tournaments on specific dates will be held for specific games in an arena in a city and country, with a reward provided by a sponsor for a certain amount of money.
+            </p>
+                            </body>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </body>
+
+</html>
